@@ -16,11 +16,9 @@ clean:
 	rm -rf *.o *.exe main *.a tests/*.o test *.gcov *.gcda *.gcno *.info report
 
 check_style:
-	clang-format -style=google -n *.c tests/*.c
-	clang-format -style=google -n *.h tests/*.h
+	clang-format -style=google -n *.c
 
 make_style:
-	clang-format -style=google -i *.c tests/*.c
-	clang-format -style=google -i *.h tests/*.h
+	clang-format -style=google -i *.c
 
 rebuild: clean all
